@@ -1,0 +1,101 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box; 
+}
+
+.active{
+  color:orangered;
+}
+
+body{
+  background-color: bLack;
+  color:white;
+  
+}
+ 
+div{
+  margin: 0 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logo{
+  max-width: 50%;
+  margin-left:30%;
+}
+
+nav{
+  margin-left: 500px;
+  
+}
+
+nav ul{
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li{
+  margin: 0 20px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover{
+  color: orangered;
+}
+
+main{
+  width:100%;
+  height: 100%;
+}
+
+.HOME{
+  margin-top: 10%;
+  margin-left: 5%;
+  margin-bottom:40%;
+  width:50%;  
+}
+
+.HOME h1{
+  font-size: 60px;
+}
+
+.HOME h3{
+  font-size: 32px;
+  color:orangered;
+}
+
+.home-content{
+  display: block;
+}
+
+.btn-box{
+  display: block;
+  margin-top: 20px;
+
+}
+
+.contact-button{
+  text-decoration: none;
+  border: solid;
+  padding:12px 35px;
+  border-radius:5px;
+  border-width: 2px;
+  border-color: orangered;
+  color: orangered;
+  transition: 0.15s;
+}
+
+.contact-button:hover{
+  background-color: orangered;
+  color: white;
+}
+
+.contact-button:active{
+  opacity: 0.5;
+}

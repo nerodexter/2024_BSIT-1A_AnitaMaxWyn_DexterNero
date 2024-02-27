@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="about.css">
+  </head>
+
+  <body>
+    <header>
+     <div class="logo-div">
+      <img class="logo" src="images/logo(final).png">
+     </div>
+     <div class="navbar">
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html" class="active">ABOUT</a></li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="#">PORTFOLIO</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+     </div>
+    </header>
+
+    <main>
+      <div class="profile">
+        <img class="profile-pic" src="images/background.png">
+      </div>
+      <div class="about">
+        <h3>About Me</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+           Est reiciendis, <br> a dolorem eaque eum velit earum tempora
+           labore maxime accusantium <br>dolor unde optio temporibus
+            nesciunt,enim ut, numquam veniam <br>voluptates!
+          </p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')"> Skills</p>
+            <p class="tab-links" onclick="opentab('experience')"> Experience</p>
+            <p class="tab-links" onclick="opentab('education')"> Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>UI?UX</span><br>Designing web/App interfaces</li>
+              <li><span>Web development</span><br>Web app development</li>
+              <li><span>App Development</span><br>Building Android/IOS apps</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>2022</span><br>Designing web/App interfaces</li>
+              <li><span>2023</span><br>Web app development</li>
+              <li><span>2024</span><br>Building Android/IOS apps</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>Bicol University</span><br>BS Information Technology</li>
+              <li><span>Web development</span><br>Web app development</li>
+              <li><span>App Development</span><br>Building Android/IOS apps</li>
+            </ul>
+          </div>
+      </div>
+
+      <script>
+        
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+          for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+          }
+          for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+          }
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab");
+        }
+      </script>
+     
+    </main>
+  </body>
+  </html>

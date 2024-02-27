@@ -1,0 +1,120 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box; 
+}
+
+.active{
+  color:orangered;
+}
+
+body{
+  background-color: bLack;
+  color:white;
+  
+}
+ 
+div{
+  margin: 0 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logo{
+  max-width: 50%;
+  margin-left:30%;
+}
+
+nav{
+  margin-left: 500px;
+}
+
+nav ul{
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li{
+  margin: 0 20px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover{
+  color: orangered;
+}
+
+.profile{
+  margin-top: 40px;
+  margin-left: 5%;
+  margin-bottom:10%;
+}
+
+.profile-pic{
+  margin-left: 15px;
+  background-color: rgb(44, 43, 43);
+}
+
+.about{
+  
+  margin-top: 24px;
+  margin-left:195px;
+  margin-bottom:15%;
+}
+h3{
+  font-size: 32px;
+}
+
+p{
+  margin-top: 10px;
+}
+
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.tab-links{
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: orangered;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+  width: 50%;
+}
+
+.tab-contents ul li{
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span{
+  color: orangered;
+  font-size: 14px;
+}
+
+.tab-contents{
+  display: none;
+}
+
+.tab-contents.active-tab{
+  display: block;
+}
