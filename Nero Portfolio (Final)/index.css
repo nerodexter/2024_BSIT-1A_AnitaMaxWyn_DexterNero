@@ -123,6 +123,7 @@ li a{
   font-size: 32px;
   color:white;
   margin-top: 150px;
+  border-color: white;
 }
 
 .title h1 span{
@@ -171,7 +172,7 @@ li a{
 }
 
 .about-content{
-  margin-bottom: 150px;
+  margin-bottom: 85px;
 }
 
 /*----------------Education-----------*/
@@ -180,6 +181,7 @@ li a{
   display: flex;
   flex-direction: row;
   width: 100%;
+ 
 }
 
 .main-title{
@@ -188,6 +190,7 @@ li a{
   font-size: 32px;
   color: white;
   margin-bottom: 75px;
+  margin-top: 220px;
 }
 
 .main-title span{
@@ -207,6 +210,42 @@ li a{
 .education-title{
   padding: 10px;
   color: white;
+  text-align: center;
+}
+
+.primary-title{
+  color: rgb(15, 196, 228);
+  
+}
+
+.primary{
+  border: solid;
+  border-color: rgb(33, 152, 173);
+  margin-bottom: 10px;
+}
+
+.primary p{
+  color: white;
+  padding-left: 10px;
+}
+
+.secondary-title{
+  color: rgb(33, 152, 173);
+}
+
+.secondary-content{
+  border: solid;
+  border-color: rgb(33, 152, 173);
+  margin-bottom: 10px;
+}
+
+.secondary-content p{
+  color: white;
+  padding-left: 10px;
+}
+
+.tertiary-title{
+  color: rgb(33, 152, 173);
 }
 
 .education-content{
@@ -229,6 +268,8 @@ li a{
 .experience-title{
   color: white;
   padding: 10px;
+  text-align: center;
+  margin-bottom: 28px;
 }
 
 .experience-content{
@@ -323,7 +364,8 @@ li a{
   color: white; /* White text color */
 }
 
-.html{width: 10%; background-color: rgb(33, 152, 173);;} /* Green */
+.html{width: 0%; background-color: rgb(33, 152, 173);;} /* Green */
+.html:hover{width: 10%; background-color: rgb(33, 152, 173);;}
 .css {width: 10%; background-color: rgb(33, 152, 173);;} /* Blue */
 .js {width: 0.5%; background-color: rgb(33, 152, 173);;} /* Red */
 .php {width: 10%; background-color: rgb(33, 152, 173);;} /* Dark Grey */
