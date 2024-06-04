@@ -1,0 +1,151 @@
+:root{
+  --color-lightcoral: #E19191 !important;
+  --color-slategray: #738290 !important;
+  --color-babypowder: #FFFCF7 !important; 
+  --text-babypowder: #FFFCF7 !important; 
+  --color-dark: #222222 !important;
+  --color-rufous: #B02E0C;
+  }
+
+  .active{
+    color: var(--color-lightcoral);
+    text-decoration: underline;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body{
+  min-height: calc(100vh - 40px);
+  background-color: var(--color-babypowder);
+
+
+}
+
+.container {
+  max-width: 1200px;
+
+  margin: 40px auto 20px auto;
+
+  padding: 20px 10px 20px 10px;
+
+  min-height: calc(100vh - 40px);
+
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-sizing{
+
+  background-color: var(--color-dark);
+
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 10px;
+  width: calc(33.333% - 20px); /* Adjust for 3 items per row */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+label{
+  color: var(--text-babypowder);
+}
+
+.card-sizing p {
+  margin: 0;
+
+  color: var(--text-babypowder);
+
+  font-weight: 500;
+}
+.card-sizing form {
+  width: 90%;
+}
+.card-sizing select, .card-sizing button {
+  width: 100%;
+  margin-top: 8px;
+
+}
+.card-sizing button {
+  background-color: #E19191;
+  color: var(--text-babypowder);
+  padding: 5px 5px 5px 5px;
+
+  border-radius: 6px;
+  border: none;
+}
+.card-sizing img{
+  width: 250px;
+  height: 200px;
+
+  border-radius: 8px;
+}
+
+
+
+
+.flex{
+
+  width: 90%;
+  margin-inline: auto;
+}
+
+
+.quantity{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction:column;
+
+  width: 250px;
+
+  padding: 0 0px 0 0px;
+  margin: 10px 10px 10px 0px;
+  
+
+;
+
+
+.quantityinput{
+  width: 45%;
+  height: 28px;
+  padding: 10px;
+  margin: 0;
+
+  outline: none;
+
+}
+
+input{
+  border-radius: 8px;
+  padding: 10px;
+
+  border: 1px solid #E19191;
+}
+
+input:focus {
+  border-color: var(--color-lightcoral);    /* Change border color on focus */
+
+  outline: none;            /* Remove default outline */
+}
+
+}
+
+.quantity{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
