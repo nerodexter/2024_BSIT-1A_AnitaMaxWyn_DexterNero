@@ -1,0 +1,74 @@
+:root{
+  --color-lightcoral: #E19191 !important;
+  --color-slategray: #738290 !important;
+  --color-babypowder: #FFFCF7 !important; 
+  --text-babypowder: #FFFCF7 !important; 
+  --color-dark: #222222 !important;
+  --color-rufous: #B02E0C;
+  }
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  min-height: calc(100vh - 40px);
+
+  background-color: var(--color-babypowder);
+}
+
+main{
+  width: 90%;
+  margin-inline: auto;
+
+  min-height: calc(100vh - 40px);
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order-group {
+  width: 80%;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.order-card {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+.order-card:last-child {
+  border-bottom: none;
+}
+.order-card p {
+  margin: 5px 0;
+}
+.order-card strong {
+  font-weight: bold;
+}
+
+.cancel-button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.cancel-button:hover {
+  background-color: #c0392b;
+}
