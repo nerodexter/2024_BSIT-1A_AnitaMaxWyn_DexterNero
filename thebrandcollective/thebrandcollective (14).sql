@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2024 at 01:56 AM
+-- Generation Time: Jun 04, 2024 at 08:41 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -154,7 +154,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `product_name`, `product_price`, `color`, `size`, `shoe_type`, `shoe_brand`, `stocks`, `stocks_history`, `product_status`, `image_path`, `arrival`) VALUES
-(1, 'Nike Dunk Low Retro', '6494', 'White, Black', 'US 7.5, US 8.5, US 9.5, US 10, US 11, US 12, US 12', 'Mens', 'Nike', 24, '2024-06-04 01:32:55', 'A', 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d01ef37b-c14a-4edd-8787-534f5732294c/dunk-low-retro-shoe-66RGqF.png', ''),
+(1, 'Nike Dunk Low Retro', '6494', 'White, Black', 'US 7.5, US 8.5, US 9.5, US 10, US 11, US 12, US 12', 'Mens', 'Nike', 200, '2024-06-04 10:14:00', 'A', 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d01ef37b-c14a-4edd-8787-534f5732294c/dunk-low-retro-shoe-66RGqF.png', ''),
 (2, 'Nike Zoom Vomero 5', '8895', 'White, Black', 'US 7.5, US 8.5, US 9.5, US 10 , US 11, US 12, US 1', 'Mens', 'Nike', 20, '2024-06-04 00:55:11', 'A', 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c1661989-40b0-44dc-8afc-b4799c8f044f/zoom-vomero-5-shoes-8m9brL.png', ''),
 (3, 'Nike Air Max Plus 3', '5495', 'White, Black', 'US 7.5, US 8.5, US 9.5, US 10, US 11, US 12, US 12', 'Mens', 'Nike', 17, '2024-06-04 00:55:11', 'A', 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/91886090-edd6-4468-b59b-fca498da0a0d/air-max-plus-3-shoes-HtMt7V.png', ''),
 (4, 'Nike P-6000', '6195', 'White, Black', 'US 7.5, US 8.5, US 9.5, US 10, US 11, US 12, US 12', 'Mens', 'Nike', 20, '2024-06-04 00:55:11', 'A', 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e3cc2305-65bb-4824-b4bd-9474386f6656/p-6000-shoes-5qgkXp.png', ''),
@@ -247,7 +247,36 @@ INSERT INTO `sales` (`sales_id`, `sales_today`, `sales_yesterday`, `sales_this_y
 (15, 0, 0, 129950, 26735, '2024-06-03'),
 (16, 0, 0, 129950, 26735, '2024-06-03'),
 (17, 0, 0, 129950, 26735, '2024-06-03'),
-(18, 0, 0, 129950, 26735, '2024-06-03');
+(18, 0, 0, 129950, 26735, '2024-06-03'),
+(19, 0, 0, 129950, 26735, '2024-06-04'),
+(20, 0, 0, 129950, 26735, '2024-06-04'),
+(21, 0, 0, 129950, 26735, '2024-06-04'),
+(22, 0, 0, 129950, 26735, '2024-06-04'),
+(23, 0, 0, 129950, 26735, '2024-06-04'),
+(24, 0, 0, 129950, 26735, '2024-06-04'),
+(25, 0, 0, 129950, 26735, '2024-06-04'),
+(26, 0, 0, 129950, 26735, '2024-06-04');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `stock_history`
+--
+
+CREATE TABLE `stock_history` (
+  `id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `stock` int(11) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `stock_history`
+--
+
+INSERT INTO `stock_history` (`id`, `product_id`, `stock`, `date`) VALUES
+(1, 1, 100, '2024-06-04 02:13:17'),
+(2, 1, 200, '2024-06-04 02:28:00');
 
 -- --------------------------------------------------------
 
@@ -354,6 +383,13 @@ ALTER TABLE `sales`
   ADD PRIMARY KEY (`sales_id`);
 
 --
+-- Indexes for table `stock_history`
+--
+ALTER TABLE `stock_history`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`);
+
+--
 -- Indexes for table `suggestion`
 --
 ALTER TABLE `suggestion`
@@ -391,7 +427,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `sales_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `sales_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT for table `stock_history`
+--
+ALTER TABLE `stock_history`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `suggestion`
@@ -404,6 +446,16 @@ ALTER TABLE `suggestion`
 --
 ALTER TABLE `user_acc`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `stock_history`
+--
+ALTER TABLE `stock_history`
+  ADD CONSTRAINT `stock_history_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

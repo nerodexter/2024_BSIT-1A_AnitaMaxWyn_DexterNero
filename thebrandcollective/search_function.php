@@ -121,15 +121,15 @@ include('./header.php');
 <main>
     <div class="container">
         <?php
-        // Include your database connection file
+ 
         include ('./database/database.php');
 
-        // Get the search query
+        
         $searchQuery = isset($_GET['searchbar']) ? $_GET['searchbar'] : '';
 
-        // If the search query is not empty
+   
         if (!empty($searchQuery)) {
-            // Prepare the SQL statement
+          
             $stmt = $conn->prepare("
                 SELECT product_id, product_name, product_price, color, size, shoe_type, shoe_brand, stocks, product_status, image_path 
                 FROM products 
@@ -205,7 +205,7 @@ include('./header.php');
             
             $stmt->close();
         } else {
-            echo "<p>Please enter a search query.</p>";
+            echo "<p>Please enter a search Item.</p>";
         }
 
         $conn->close();

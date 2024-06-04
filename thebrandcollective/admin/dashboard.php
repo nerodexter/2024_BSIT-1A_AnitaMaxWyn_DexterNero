@@ -353,7 +353,7 @@ th {
           <tr>
             <th>Product Name</th>
             <th>Stocks</th>
-            <th>Stock History</th>
+
           </tr>
           <?php
           if ($inventory_report_result) {
@@ -362,7 +362,7 @@ th {
             <tr>
               <td><?php echo $row['product_name']; ?></td>
               <td><?php echo $row['stocks']; ?></td>
-              <td><?php echo $row['stocks_history']; ?></td>
+              
             </tr>
           <?php
             }
@@ -374,6 +374,35 @@ th {
     </div>
   </div>
 </div>
+<div class="stocks_history">
+  <h1>Stock History</h1>
+  <?php
+    $sql = "SELECT * FROM stock_history";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result->num_rows > 0) {
+        echo "<table border='1'>
+                <tr>
+                    <th>ID</th>
+                    <th>Product ID</th>
+                    <th>Stock</th>
+                    <th>Date</th>
+                </tr>";
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<tr>";
+            echo "<td>" . $row['id'] . "</td>";
+            echo "<td>" . $row['product_id'] . "</td>";
+            echo "<td>" . $row['stock'] . "</td>";
+            echo "<td>" . $row['date'] . "</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "No stock history found.";
+    }
+  ?>
+</div>
+
 </main>
 </body>
-</html>
+</html
